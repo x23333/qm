@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>phaser</title>
+    <script src="https://cdn.bootcss.com/phaser/2.6.2/phaser.min.js"></script>
+</head>
+<body>
+    <div class="game"></div>
+    <script>
+        
+        var game = new Phaser.Game(800, 600, Phaser.AUTO, '#game',
+         {preload: preload, create: create, update: update});
+
+        // var game = new Phaser.game(800,600,Phaser.AUTO,'#game',{
+        //     preload:preload, //预加载图片，声音等
+        //     create:create,
+        //     update:update  //关键帧过度,游戏场景的切换
+        // });
+        function preload(){
+            //背景
+            game.load.image('lazur', './thorn_lazur.png');//给预加载的图片取名（作为游戏角色，背景，装饰等）
+            //精灵
+            game.load.spritesheet('mummy', './metalslug_mummy37x45.png', 37, 45, 18);
+        }
+
+        var back;//背景
+        var mummy;// mummy 精灵
+        var anim;//定义精灵的动作
+        var loopText;//记录文本（分数等）
+
+        function create(){
+            //创建背景
+            back = game.add.image(0, -400, 'lazur');
+            back.scale.set(2);
+            back.smoothed = false;
+            //创建精灵
+            mummy = game.add.sprite(200, 360, 'mummy',10)
+            mummy.scale.set(4);
+            mummy.smoothed = false;
+            //设置精灵的动作
+            anim = mummy.animations.add('walk');
+            anim.onStart.add(animationStarted, this);
+            anim.onLoop.add(animationLooped, this);
+            anim.onComplete.add(animationStopped, this);
+            anim.play(10, true);
+
+            
+        }
+        //开始
+        function animationStarted (sprite, animation){
+            game.add.text(32, 32, 'Animation started',{
+                fill:'white'
+            });
+        }
+        //循环
+        function animationLooped (sprite, animation){
+            if(animation.loopCount === 1){
+                loopText = game.add.text(32, 64, 'Animation looped', {
+                    fill:'white'
+                });
+            } else {
+                loopText = game.add.text(32, 64, 'Animation looped×2', {
+                    fill:'white'
+                });
+                animation.loop = false;
+            }
+        }
+        //停止
+        function animationStopped (sprite, animation){
+
+        }
+        function update(){
+            back.x -= 1;
+        }
+    </script>
+</body>
+</html>
