@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css.css">
+    
+    <title>手淘年货节--揭幕动画</title>
+</head>
+<body>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js">
+    // document.documentElement.style.fontSize='10vw'; 设置html 的font-size为1/10 的屏幕宽度
+    //先获取设备的宽度 除10 再把它赋值给html的font-size 通过 .style.fontSize
+    //放在即时运行函数中 防止污染整个环境
+    // (function(){    
+    //     function setfontSize(){
+    //         const w = window.innerWidth / 10;
+    //         const oHTML = document.documentElement;
+    //         oHTML.style.fontSize = w + 'px';
+    //     }
+    //     setfontSize();
+    //     window.onresize = function() {
+
+    //     }
+
+    // }
+    // })()
+    </script>
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="col-5"></div>
+        <!-- <div class="col-2"></div>
+        <div class="col-8"></div> -->
+        <!-- <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div> -->
+    </div>
+    <div class="dragon-poplayer" id="dragon-poplayer">
+        <div class="dragon-section dragon-ready-play">
+
+        </div>
+        <div class="dragon-section dragon-playing" id="dragon-playing">
+
+        </div>
+    </div>
+    <script src="./common.js"></script>
+    <script>
+    const oRow = document.querySelector('.row');
+    console.log(oRow.childNodes);
+    </script>
+</body>
+</html>
