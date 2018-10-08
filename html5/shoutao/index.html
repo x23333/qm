@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*
+    * 功能：计算全年工资
+    * @params level default C，in 'ABCD'
+    * @params salary number
+    * @return totalSalary
+    *
+    */
+    const salaryInput = document.getElementById('salary');
+        salaryInput.addEventListener('change', function() {
+            // 强制类型转换
+            let salary = Number(this.value);
+            console.log(salary, typeof salary);
+    });
+    // function totalSal (mon,rank = 'c') {
+    //     let sal;
+    //     switch(rank){
+    //         case 'a':
+    //         sal = mon * (12 + 6);
+    //         break;
+    //         case 'b':
+    //         sal = mon * (12 + 4);
+    //         break;
+    //         case 'c':
+    //         sal = mon * (12 + 2.5);
+    //         break;
+    //         case 'd':
+    //         sal = mon * (12 + 2);
+    //         break;
+    //         default:
+    //         alert('兄弟你凉了');
+    //         break;
+    //     }
+    //     return sal;
+    // }
+    // console.log(totalSal(5000,'a'));
+    function performanceA (){
+        return 6;
+    }
+    function performanceB (){
+        return 4;
+    }
+    function performanceC (){
+        return 2.5;
+    }
+    function performanceD (){
+        return 2;
+    }
+    function totalSal(Salary) {
+        // if(level != 'A' && level != 'B' && level != 'C' && level != 'D' ) {
+        //     throw new Error('好好选 谢谢~');
+        // }
+        
+        // if('ABCD'.indexOf(level) < 0){
+        //     throw new Error('好好选 谢谢~');
+        // }
+
+        // if(typeof Salary === 'number' && Salary < 0){
+        //     throw new Error('不干了吧兄弟');
+        // }
+
+        if(level === 'A'){
+            return performanceA(salary);
+        }
+        if(level === 'B'){
+            return performanceB(salary);
+        }
+        if(level === 'C'){
+            return performanceC(salary);
+        }
+        if(level === 'D'){
+            return performanceD(salary);
+        }
+        return salary * setLevel;
+        
+    }
+
+    // let salary = prompt('请输入工资');
+    // let totalSal2 = salary * (12 + 2.5);
+    // console.log(totalSal2);
+</script>
+<!-- 输入框中哪怕是数字， 类型依旧是string， 计算时类型自动转换 叫隐式类型转换 -->
+<input type="text" id="salary" >
+</body>
+</html>
