@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const race = '100m Dash';
+    const winners = ['tom','cat','dog'];    
+    // const win = [];
+    // // 生成json数组 item json {name ，race ，'100m Dash'，place}
+    // function creat(arr) {
+    //     for(let i = 0;i < arr.length;i++){
+    //         win.push({
+    //             name:winners[i],
+    //             race:race,
+    //             place:i+1
+    //         })
+    //     }
+    // }
+    // creat(winners);
+    // console.log(win);
+
+    //遍历每一项  函数里，返回新的一项
+    // 如果箭头函数的函数体内只有一条代码，并且是返回值，可以省去return 用加()
+    const win = winners.map((winner,i) => ({
+        name:winner,
+        race,
+        place:i + 1
+    }));
+    console.log(win);
+    </script>
+</body>
+</html>

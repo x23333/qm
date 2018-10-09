@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>抛物线</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+.ball {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+</style>
+<body>
+    <!-- <div class="boll"></div> -->
+    <script>
+        let ball = document.createElement('div');
+        ball.className = 'ball';
+        document.body.appendChild(ball);
+
+        let XStart = 0, XEnd = 1000, YStart = 0, YEnd = 1000;
+        let time = 520;
+        let Xspeed = (XEnd - XStart) / time; 
+        let a = YEnd * 2 / time * time;
+        
+        let nowX = XStart;
+        let nowY = YStart;
+
+        let loop = 0;
+        let move = () => {
+            requestAnimationFrame(() => {
+                nowX += Xspeed;
+                nowY += a * loop; 
+                ball.style.top = nowX + 'px';
+                ball.style.left = nowY + 'px';
+                loop++;
+                move();
+        })
+        }
+        move();
+        
+    </script>
+</body>
+</html>
