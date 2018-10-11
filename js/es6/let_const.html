@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // 可以给复杂常量增加值
+    // const friends = ['小绿','小蓝']
+    // friends.push('小黄');
+    // friends.push('小白');
+    // friends.push('小紫');
+    // friends.push('小红');
+    // console.log(friends);
+    // 不能换类型
+    // friends = 404;
+    // const num = 1;
+    // 不能给普通类型变换值
+    // num = 2;
+// function a(){
+//     console.log('asdasd',pizza);
+//     var pizza = 'Deep Dish';
+// }
+// a();
+
+    const person = {
+        name: '小橙',
+        age:20
+    }
+    person.piont = 'piont';
+    console.log(person);
+    const wes = Object.freeze(person);
+    console.log(wes);
+    wes.nickname = 'bos';
+    console,log(wes);
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+.article-detail .mainlib .center_content .mobile_article {
+    padding: 0 15px;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1.6rem;
+    font-weight: 600;
+    font-size: 100%;
+}
+p, ul {
+    margin: 0;
+}
+.article-detail .single-post-comment .comment-list-title {
+    position: relative;
+    margin: 10px 0;
+    padding-left: 8px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #666;
+}
+.article-detail .single-post-comment .input-module {
+    margin-bottom: 2rem;
+}
+
+*, :after, :before {
+    box-sizing: border-box;
+}
+.article-detail .single-post-comment .display-module {
+    text-align: center;
+}
+.article-detail .single-post-comment .comment-list-title {
+    position: relative;
+    margin: 10px 0;
+    padding-left: 8px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #666;
+}
+.article-detail .single-post-comment .display-module li {
+    text-align: left;
+    padding: .75rem 0;
+}   
+.article-detail .single-post-comment .display-module .msgwrap {
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 21px;
+}
+.article-detail .single-post-comment .display-module .msgwrap .user-info {
+    position: relative;
+    margin-bottom: 8px;
+}
+.article-detail .single-post-comment .display-module .msgwrap .name {
+    color: #666;
+    font-size: 14px;
+}
+.article-detail .single-post-comment .display-module .msgwrap .time {
+    color: #ccc;
+}
+.article-detail .single-post-comment .display-module .msgwrap .user-info-right {
+    float: right;
+}
+.article-detail .single-post-comment .display-module .msgwrap .submit {
+    color: #4285f4;
+    font-size: 14px;
+    padding: 0;
+    margin-left: 20px;
+}
+.article-detail .single-post-comment .display-module .msgwrap .text {
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre-line;
+}
