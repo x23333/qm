@@ -10,4 +10,17 @@ comolie
   模板
 
   企业级的开发方案
+    自动化开发的
   yarn add babel-core -D (-D 只在工作流中用 不用发布到服务器端)
+  - babel 编译任务
+  cli 命令行
+  babel-cli 全局安装
+  babe-core babel-preser-env 本地安装的开发依赖 devDependcies
+  .babelrc 配置文件
+  {
+    "presets":["env"]
+  }
+  es6 => es5
+
+
+- stylus css 编译任务
