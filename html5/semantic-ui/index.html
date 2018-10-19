@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>semantic-ui login</title>
+  <link href="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.css" rel="stylesheet"/>
+  <style>
+  body {
+    background: #dadada;
+  }
+  body > .grid {
+    height: 100%;
+  }
+  .column {
+    max-width: 450px;
+  }
+  </style>
+</head>
+<body>
+  <div class="ui middle aligned center aligned grid">
+    <div class="column">
+      <h2 class="ui teal image header">
+        <img src="http://www.semantic-ui.cn/examples/assets/images/logo.png" class="image" alt="">
+        <div class="content">
+          Log-in to your account
+        </div>
+      </h2>
+      <form action="http://www.baidu.com" method="POST" class="ui large form">
+        <div class="ui stacked segment">
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="user icon"></i>
+              <input type="email" name="email" placeholder="E-mail address">
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left icon input">
+              <i class="lock icon"></i>
+              <input type="password" name="password" placeholder="Password" />
+            </div>
+          </div>
+          <!-- <div class="ui fluid large teal submit button">Login</div> -->
+          <button type="submit" class="ui fluid large teal submit button">Login</button>
+        </div>
+        <div class="ui error message">
+          <ul class="list">
+            <li>Please enter your E-mail</li>
+            <li>Please enter a valid e-mail</li>
+            <li>Please enter your password</li>
+            <li>Your password must at least 6 characters</li>
+          </ul>
+        </div>
+      </form>
+      <div class="ui stacked segment">立即注册</div>
+    </div>
+  </div>
+<script src="http://www.semantic-ui.cn/examples/assets/library/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/semantic-ui/2.3.1/semantic.min.js"></script>
+<script>
+$(function(){
+  $('.ui.form')
+    .form({
+      fields:{
+        email:{
+          identifier: 'email',
+          rules: [
+            {
+              type: 'empty',
+              prompt: 'Please enter your email'
+            },
+            {
+              type: 'email',
+              prompt:'Please enter a valid e-mail'
+            }
+          ]
+        },
+        password:{
+          identifier: 'password',
+          rules: [
+            {
+              type: 'empty',
+              prompt: 'Please enter your password'
+            },
+            {
+              type: 'length[6]',
+              prompt: 'Your password must be at least 6 character'
+            }
+          ]
+        }
+      }
+    })
+  // $('.ui.form').submit(function(){
+  //   // alert('提交！')
+  //   // console.log(event);
+  //   // return false;
+  //   event.preventDefault();
+  //   let email = $('input[name="email"]').val();
+  //   let password = $('input[name="password"]').val();
+  //   if(!email) {
+  //     alert('请输入邮箱！');
+  //     return;
+  //   }
+  //   if(/^[A-Za-z0-9._%-]+@([A-Za-z0-9-]+\.)+[A-Za-z]{2,4}$/.test(email)){
+  //     alert('请输入正确邮箱！');
+  //     return;
+  //   }
+  //   if(!password){
+  //     alert('请输入密码！');
+  //     return;
+  //   }
+  //   if(password.length < 6){
+  //     alert('密码不能小于6位  ');
+  //     return;
+  //   }
+
+  //   this.submit();
+  // });
+})
+</script>
+</body>
+</html>

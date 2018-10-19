@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JQuery抓取数据</title>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.js"></script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded',function(){
+      const eleUsername = document.querySelector('.username');
+      const eleMotto = document.querySelector('.motto');
+      let xhr = null;//异步js 主动拉取的核心对象
+      // 浏览器嗅探
+      if(window.XMLHttpRequest){
+        xhr = new XMLHttpRequest();
+      }else {
+        //老浏览器 old browser
+        xhr = new ActiveXObject('Microsoft.XMLHTTP');
+      }
+      // 页面打开一个去后端数据服务，url，.json资源 的通道
+      // 主动拉取
+      xhr.open('get','./dream.json',true);
+      xhr.send();
+      xhr.onreadystatechange = function() {
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4 && xhr.status === 200){
+          console.log(xhr.responseText);
+          const dream = JSON.parse(xhr.responseText);
+          console.log(dream);
+          eleUsername.innerHTML = dream.username;
+          eleMotto.innerHTML = dream.motto;
+        } 
+      }
+    })
+    // const eleUsername = document.querySelector('username');
+    // const eleMotto = document.querySelector('motto');  
+    // domReady 比window.onload 早一些
+    // $(function(){
+    //   const eleUsername = document.querySelector('.username');
+    //   const eleMotto = document.querySelector('.motto');
+    //   console.log(eleUsername)
+    // })
+    // window.onload = function(){
+    //   console.log('load')
+    // }
+    // document.addEventListener('DOMContentLoaded',function(){
+    //   console.log('dom');
+    // });
+    // $(function(){
+    //   // $('.username').html('哈曼');//选中 元素 并操作
+    //   $.getJSON('./dream.json', function(data){
+    //     console.log(data);
+    //     $('.username').html(data.username);
+    //   })
+    // })
+    
+  </script>
+</head>
+<body>
+  <div class="box">
+    <div class="username"></div>
+    <div class="motto"></div>
+  </div>
+  
+</body>
+</html>
