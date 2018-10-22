@@ -1,12 +1,20 @@
 //index.js
 //获取应用实例
-import config from '../../utils/config';
+import config from "../../utils/config"
+
 
 
 const app = getApp()
 
 Page({
   data: {
+    page:1,
+    pageSize:4,
+    totalSize:0,
+    days:3,
+    hasMore:true,
+    articleList:[],
+
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -18,22 +26,15 @@ Page({
       url: '../logs/logs'
     })
   },
-  showDetail: function(e){
+  showDetail:function(e){
     let dataset = e.currentTarget.dataset;
-    let item = dataset && dataset.item; 
+    let item = dataset && dataset.item;
     let contentId = item.contentId || 0;
     wx.navigateTo({
-      url: `../detail/detail?contentId=${contentId}`
-    })
+      url:`../detail/detail?contentId=${contentId}`
+    });
   },
   onLoad: function () {
-    let title = config.defaultBarTitle;
-    wx.setNavigationBarTitle({
-      title,
-      success: function(res){
-
-      }
-    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -60,6 +61,18 @@ Page({
         }
       })
     }
+
+    let title = config.defaultBarTitle;
+    wx.setNavigationBarTitle({
+      title,
+      success: function(res){
+
+      }
+    })
+
+
+    this.requestArticle();
+    
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -68,5 +81,36 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  requestArticle: function(){
+    wx.request({
+      url:'https://www.easy-mock.com/mock/5bca924ce6742c1bf8220bdd/kicamp/list#!method=get',
+      success:(res)=>{
+        let list = this.data.articleList;
+        list = [...list,...res.data.data];
+
+        console.log(list);
+
+        this.setData({
+          hiddenLoading:true,
+          articleList:list
+        })
+
+        
+        
+      }
+    })
+  },
+  onReachBottom(){
+    if(this.data.hasMore){
+      let nextPage = this.data.page + 1;
+      this.setData({
+        page:nextPage
+      })
+    }
+    this.requestArticle();
+
+    console.log('到页面底部了');
+    console.log('page:'+this.data.page);
   }
 })

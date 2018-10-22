@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>花式玩数组</title>
+</head>
+<body>
+  <h2 class="jump">abcdefgh</h2>
+  <script>
+    // 一版*******************************
+  // let str = document.querySelector('.jump').innerHTML;
+  // for(let char of str){
+  //   let span = document.createElement('span');
+  //   span.innerHTML = char;
+  //   document.querySelector('body').appendChild(span);
+  // }
+    // 二版*******************************
+  // let jump = document.querySelector('.jump').innerHTML
+  //   let jumpArr = [...jump]
+  //   jumpArr.forEach((item, index) => {
+  //     let span = document.createElement('span')
+  //     span.innerHTML = item
+  //     document.querySelector('body').appendChild(span)
+  //   })
+    // 三版*******************************    
+  const heading = document.querySelector('.jump');
+  heading.innerHTML = [...heading.textContent].map((letter) => `<span>${letter}</span>`).join('');
+
+  </script>
+</body>
+</html>
