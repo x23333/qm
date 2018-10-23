@@ -1,0 +1,20 @@
+<!-- <view class="decs">基本用法</view>
+// 封装一个组件， 可以复用组件的介绍功能， 可以适用所有组件 -->
+<demo-block title="自定义行动按钮">
+<view class="desc">自定义行动按钮</view>
+<van-search  value="{{value}}" use-action-slot 
+bind:change="onChange" bind:search="onSearch">
+<view slot="action" bind:tap="onSearch">搜索</view>
+</van-search>
+</demo-block>
+
+<!-- // <van-search
+//   value="{{value}}"
+//   placeholder="请输入关键字"
+//   bind:change="onChange"
+//   bind:search="onSearch" />
+//   <view class="desc">listen对应事件</view>
+// <van-search value="{{value}}" placeholder="输关键字！" 
+// show-action bind:change="onChange" bind:search="onSearch"
+// bind:cancel="onCancel" /> -->
+
