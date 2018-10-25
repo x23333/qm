@@ -9,13 +9,14 @@ Page({
           name: 'bookinfo',
           data: {
             isbn: res.result
-          },
+          }
+          ,
           success: res => {
             // console.log(res);
             const bookString = res.result;
             const db = wx.cloud.database();
-            const book = db.collection('myBook');
-            db.collection('myBook').add({
+            const book = db.collection('mybook');
+            db.collection('mybook').add({
               data: JSON.parse(bookString)
             }).then(res => {
               console.log(res);

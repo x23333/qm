@@ -1,0 +1,52 @@
+Arguments: 
+  G:\QMX\Node.js\node.exe G:\QMX\yarn\bin\yarn.js add stylint-config-standard -D
+
+PATH: 
+  .;G:\jdk 8\lib;G:\QMX\Node.js;G:\jdk 8\lib\dt.jar;G:\jdk 8\lib\tools.jar;G:\QMX\Node.js;G:\QMX\yarn\bin\;G:QMX\Node.js;G:\QMX\Git;;G:\QMX\Microsoft VS Code\bin;C:\Users\mmc\AppData\Roaming\npm;C:\Users\mmc\AppData\Local\Yarn\bin;G:\安装目录\Microsoft VS Code\bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.12.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: http://registry.npm.taobao.org/stylint-config-standard: Not found
+      at Request.params.callback [as _callback] (G:\QMX\yarn\lib\cli.js:64202:18)
+      at Request.self.callback (G:\QMX\yarn\lib\cli.js:137468:22)
+      at emitTwo (events.js:126:13)
+      at Request.emit (events.js:214:7)
+      at Request.<anonymous> (G:\QMX\yarn\lib\cli.js:138440:10)
+      at emitOne (events.js:116:13)
+      at Request.emit (events.js:211:7)
+      at IncomingMessage.<anonymous> (G:\QMX\yarn\lib\cli.js:138362:12)
+      at Object.onceWrapper (events.js:313:30)
+      at emitNone (events.js:111:20)
+
+npm manifest: 
+  {
+    "name": "npm_hello_script",
+    "version": "0.1.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "lint:js": "eslint *.js",
+      "lint:css": "stylint *.less",
+      "test": "lint:*"
+    },
+    "keywords": [],
+    "author": "x23333 <2393274999@qq.com> (https://github.com/x23333)",
+    "license": "MIT",
+    "devDependencies": {
+      "eslint": "^5.7.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
