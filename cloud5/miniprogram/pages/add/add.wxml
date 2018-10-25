@@ -1,0 +1,1 @@
+<van-button type="warning" block bindtap="upload">点我上传</van-button>
