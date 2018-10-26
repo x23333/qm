@@ -2,7 +2,10 @@
   "cloud": true,
   "pages": [
     "pages/index/index",
-    "pages/add/add"
+    "pages/add/add",
+    "pages/user/user",
+    "pages/photo/photo",
+    "pages/mix/mix"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

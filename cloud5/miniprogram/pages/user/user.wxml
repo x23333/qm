@@ -1,0 +1,18 @@
+<view class="avatarBox">
+  <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+  <view>{{userInfo.nickName}}</view>
+</view>
+<view>
+  <van-panel title="{{userInfo.nickName}}的图片">
+    <van-row class="imageBox">
+      <block wx:for="{{photos}}" wx:key="item._id">
+        <navigator url="../photo/photo?id={{item._id}}">
+          <van-col span="8">
+            <image src="{{item.image}}" class="image" />
+          </van-col>
+        </navigator>
+      </block>
+    </van-row>
+  </van-panel>
+</view>
+  
