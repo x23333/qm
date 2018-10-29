@@ -1,0 +1,27 @@
+<view class="header">
+  <view class="header-con">
+    <view class="yyshead">
+      <view class="i-h5-logo-yys"></view>
+    </view>
+  </view>
+</view>
+<view class="banner">
+  <view class="wp">
+    <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/banner.jpg" />
+  </view>
+</view>
+<view class="mainbox">
+  <view>
+    <view><image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part00.jpg" /></view>
+    <view><image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part00.jpg" /></view>
+    <view><image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part00.jpg" /></view>
+    <view><image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part00.jpg" /></view>
+    <view><image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part00.jpg" /></view>
+  </view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+  <view></view>
+</view>

@@ -1,0 +1,40 @@
+view {
+  display: block;
+}
+.header {
+  margin: 0;
+  padding: 0;
+  height: 72px;
+  display: block;
+}
+.header-con {
+  height: 72px;
+  line-height: 11px;
+  background: url(https://m.gift.163.com/images/ui_icon/yysbg.jpg) 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  border-bottom: 1px solid #b79651;
+  color: #b49152;
+  overflow: hidden;
+}
+.header-con .yyshead {
+  padding: 14px 90px;
+  margin: 0 auto;
+}
+.header-con .yyshead .i-h5-logo-yys {
+  background-size: 100% 100%;
+  width: 196px;
+  height: 50px;
+  background-image: url(https://m.gift.163.com/images/ui_icon/h5-logo-yys.png);
+}
+.banner {
+  overflow: hidden;
+  background-color: #efe8e0;
+}
+.wp {
+  margin: 0 auto;
+}
+image {
+  vertical-align: top;
+  width: 100%;
+}

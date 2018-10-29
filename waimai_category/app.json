@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/wxParse/wxParse",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/show-html/show-html"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
