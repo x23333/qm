@@ -1,0 +1,9 @@
+<!--miniprogram/pages/productList/productList.wxml-->
+<scroll-view>
+  <block  wx:for="{{list}}" wx:key="{{item.id}}">
+  {{list.name}}
+    <view>
+      <image src="{{list.image}}" />
+    </view>
+  </block>
+</scroll-view>

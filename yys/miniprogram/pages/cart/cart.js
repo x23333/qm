@@ -5,7 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    hasList: false,
+    carts: [],
+    totalPrice: 0,
+    selectAllStatus: false
   },
 
   /**
@@ -13,6 +16,11 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+  Toindex: function(){
+    wx.switchTab({
+      url: '../index/index'
+    })
   },
 
   /**

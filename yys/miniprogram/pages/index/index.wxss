@@ -1,40 +1,66 @@
 view {
   display: block;
 }
+/* 头 */
 .header {
   margin: 0;
   padding: 0;
-  height: 72px;
+  height: 144rpx;
   display: block;
 }
 .header-con {
-  height: 72px;
-  line-height: 11px;
+  position: fixed;
+  top: 0;
+  height: 144rpx;
+  line-height: 22rpx;
   background: url(https://m.gift.163.com/images/ui_icon/yysbg.jpg) 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
-  border-bottom: 1px solid #b79651;
+  border-bottom: 2rpx solid #b79651;
   color: #b49152;
   overflow: hidden;
 }
+.header-con slideDown {
+  top: 144rpx;
+  animation: hide .5s ease-out;
+}
 .header-con .yyshead {
-  padding: 14px 90px;
+  padding: 28rpx 180rpx;
   margin: 0 auto;
 }
 .header-con .yyshead .i-h5-logo-yys {
   background-size: 100% 100%;
-  width: 196px;
-  height: 50px;
+  width: 392rpx;
+  height: 100rpx;
   background-image: url(https://m.gift.163.com/images/ui_icon/h5-logo-yys.png);
 }
+#mainBox {
+  background-color: #efe8e0;
+}
+#mainBox image {
+  width: 100%;
+  
+  vertical-align: top;
+}
+/* 头图 */
+
 .banner {
+  top: 0;
   overflow: hidden;
   background-color: #efe8e0;
 }
 .wp {
-  margin: 0 auto;
+  max-width: 750rpx;
+  margin: 0;
 }
-image {
-  vertical-align: top;
-  width: 100%;
+
+.wp image {
+  width:100%;
+  border: 0;
+  border-style: none;
+  display: block;
+}
+.wp .col-50 {
+  float: left;
+  width: 50%;
 }

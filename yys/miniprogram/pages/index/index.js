@@ -9,6 +9,17 @@ Page({
     takeSession: false,
     requestResult: ''
   },
+  // navigateToList: function(option) {
+  //   console.log(option.currentTarget.dataset.title);
+  //   let par = option.currentTarget.dataset.title;
+  //   let cl = option.currentTarget.dataset.base;
+  //   wx.navigateTo({
+  //     url: `../productList/productList?title=${par} & base=${cl}`,
+  //     success: (res) => {
+  //     console.log(res);
+  //   } 
+  //   })
+  // },
 
   onLoad: function() {
     if (!wx.cloud) {

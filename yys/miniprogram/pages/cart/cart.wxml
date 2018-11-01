@@ -1,2 +1,9 @@
-<!--miniprogram/pages/cart/cart.wxml-->
-<text>miniprogram/pages/cart/cart.wxml</text>
+<view class="main">
+  <view wx:if="{{hasList}}">
+    
+  </view>
+  <view wx:else>
+    <view class="cart-no-data">购物车是空的哦~</view>
+    <button bindtap="Toindex" class="yysHome">去逛逛</button> 
+  </view>
+</view>
