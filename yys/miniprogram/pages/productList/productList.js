@@ -1,6 +1,10 @@
 // miniprogram/pages/productList/productList.js
+wx.cloud.init({
+})
 const db = wx.cloud.database();
-const list = db.collection('patList')
+
+
+
 Page({
 
   /**
@@ -18,14 +22,25 @@ Page({
     console.log(options);
     let lei = options.base;
     console.log(lei)
-    this.setData({
-      lei,
-      list
-    });
+    // this.setData({
+    //   lei,
+    //   list
+    // });
     wx.setNavigationBarTitle({
       title: options.title
     });
-    
+    db.collection("patList")
+    .where({
+      lei: "pat"
+    })
+    .get({
+      success: res => {
+        console.log(res)
+        this.setData({
+          list: res.data
+        })
+      }
+    })
   },
   getData: function(){
     // let li = [];

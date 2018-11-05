@@ -1,9 +1,14 @@
 <!--miniprogram/pages/productList/productList.wxml-->
 <scroll-view>
   <block  wx:for="{{list}}" wx:key="{{item.id}}">
-  {{list.name}}
-    <view>
-      <image src="{{list.image}}" />
+  <!-- <image src="{{item.image}}" /> -->
+    <view class="box">
+      <van-card title="{{item.name}}" thumb="{{item.image}}">
+        <view slot="footer">
+          <text class="price">￥{{item.price}}</text>
+          <view><image src="../../images/yys-icon/buy.png" mode="widthFix" /></view>
+        </view>
+      </van-card>
     </view>
   </block>
 </scroll-view>

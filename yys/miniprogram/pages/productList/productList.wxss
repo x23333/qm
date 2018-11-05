@@ -1,1 +1,16 @@
-/* miniprogram/pages/productList/productList.wxss */
+.price {
+  font-size: 48rpx;
+  color: red;
+}
+.buy {
+  border-radius: 50%;
+  width: 50rpx;
+  height: 50rpx;
+}
+.buy image {
+  width: 10%;
+}
+.box {
+  margin: 20rpx 20rpx 40rpx;
+  border: 4rpx solid #e5e5e5;
+}
