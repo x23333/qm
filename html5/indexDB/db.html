@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IndexDB</title>
+</head>
+<body>
+<script>
+  
+
+// 前端数据库 web SQL RDMBS 关系型数据
+// IndexDB NOSQL  
+// PWA offline APP 网页开发？ Web App
+
+// 1. 打开数据库
+const request = window.indexedDB.open('xzt', 1);
+
+request.onerror = function(event) {
+  console.log('数据库打不开')
+}
+
+request.onsuccess = function() {
+  
+  db = request.result;
+  console.log('opened',db)
+  // add();
+  read();
+}
+
+request.onupgradeneeded = function(event) {
+  console.log('upgrade')
+  db = event.target.result;
+  let objectStore;
+  if(!db.objectStoreNames.contains('person')){
+    objectStore = db.createObjectStore('person', {keyPath: 'id' });
+    objectStore.createIndex('name', 'name', { unique: false});
+    objectStore.createIndex('email', 'email', { unique: true});
+  }
+  
+}
+function add() {
+  // 索引 index createIndex 查询 meet 索引
+  // 事物
+  const request = db.transaction(['person'], 'readwrite')
+    .objectStore('person')
+    .add({ id: 1, name: '张三', age: '22', single: true, email: 'sdasd@asdas.com'});
+    request.onsuccess = function(event){
+      console.log('数据存储成功')
+    }
+    request.onerror = function(event){
+      console.log('数据存储失败')
+    }
+}
+function read() {
+  var transaction = db.transaction(['person']);
+  var objectStore = transaction.objectStore('person');
+  var request = objectStore.get(1);
+  request.onsuccess = function(event){
+    if(request.result) {
+      console.log(`Name: ${request.result.name}`);
+      console.log(`Age: ${request.result.age}`);
+      console.log(`Email: ${request.result.email}`);
+
+    }else{
+      console.log('数据查询失败')
+    }
+  }
+
+}
+</script>
+</body>
+</html>
