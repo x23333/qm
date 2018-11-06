@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Multi-异步解决</title>
+</head>
+<body>
+  <script>
+    // const read = async () => {
+    //   let result = await new Promise((resolve, reject) => {
+    //     const postsPromise = fetch('https://www.easy-mock.com/mock/5bca9240e6742c1bf8220bbd/kicamp/post');
+    //     console.log(postsPromise);
+    //     resolve('correct');
+    //   });
+    //   console.log(result)
+    //   const streetCarsPromise = fetch('https://www.easy-mock.com/mock/5bca9240e6742c1bf8220bbd/kicamp/post');
+    //   console.log(streetCarsPromise);
+    // }
+    // read();
+    // Promise 一步代码的顺序执行
+    // 因为有时前面代码的结果是后面的需求， 或不管先后都执行就行
+    const postsPromise = fetch('https://www.easy-mock.com/mock/5bca9240e6742c1bf8220bbd/kicamp/post');
+    const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+    // postsPromise
+    // .then(res => res.json())
+    // .then(data => {
+    //   console.log(data);
+    //   // 嵌套 异步问题 js 天生的， callback 回调函数来解决的 回调地狱！！
+    //   return streetCarsPromise;
+    // })
+    // .then(res => res.json())
+    // .then(data => {
+    //   console.log(data)
+    // })
+    Promise
+      .all([postsPromise, streetCarsPromise])
+      .then(responses => {
+        // console.log(responses)
+        return Promise.all(responses.map(res => res.json()))
+      })
+      .then(responses => {
+        console.log(responses)
+      })
+      .catch(error => {
+        console.log('false')
+      })
+    
+  </script>
+</body>
+</html>
