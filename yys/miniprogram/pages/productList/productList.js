@@ -3,8 +3,6 @@ wx.cloud.init({
 })
 const db = wx.cloud.database();
 
-
-
 Page({
 
   /**
@@ -22,25 +20,46 @@ Page({
     console.log(options);
     let lei = options.base;
     console.log(lei)
-    // this.setData({
-    //   lei,
-    //   list
-    // });
     wx.setNavigationBarTitle({
       title: options.title
     });
-    db.collection("patList")
-    .where({
-      lei: "pat"
-    })
-    .get({
-      success: res => {
-        console.log(res)
-        this.setData({
-          list: res.data
-        })
-      }
-    })
+    db.collection("productlist")
+      .where({
+        lei: "pat"
+      })
+      .get({
+        success: res => {
+          this.setData({
+            list: res.data
+          })
+        }
+      })
+    // this.setData({
+    //   list: db.collection("productlist")
+    //   .where({
+    //     "lei": "pat"
+    //   })    
+    // })
+    // .get(res => {
+    //   console.log(res);
+    //   this.setData({
+    //     list: res.data
+    //   })
+    // })
+    // .get({
+    //   success: res => {
+    //     console.log(res);
+    //     res.data.where({
+    //       lei: "pat"
+    //     })
+    //     .get(res => {
+    //       console.log(res);
+    //       this.setData({
+    //         list: res.data
+    //       })
+    //     })
+    //   }
+    // })
   },
   getData: function(){
     // let li = [];

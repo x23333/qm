@@ -1,16 +1,34 @@
+.container {
+  padding: 25rpx;
+  background: #fff;
+}
+.card.col-50 {
+  float: left;
+  text-align: center;
+  width: 47.333%;
+  margin-right: 10rpx;
+}
+.card.col-50:nth-child(odd) {
+  float: right;
+  margin-left: 10rpx;
+}
+image {
+  width: 100%;
+}
+.title {
+  color: #727272;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+}
 .price {
-  font-size: 48rpx;
-  color: red;
+  color: #fc5600;
+  font-size: 26rpx;
 }
-.buy {
-  border-radius: 50%;
-  width: 50rpx;
+.footer {
+  width: 100%;
   height: 50rpx;
-}
-.buy image {
-  width: 10%;
-}
-.box {
-  margin: 20rpx 20rpx 40rpx;
-  border: 4rpx solid #e5e5e5;
+  text-align: center;
+  background: #eee;
+  padding: 40rpx 0;
+  color: #9c9c9c;
 }

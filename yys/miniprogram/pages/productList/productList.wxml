@@ -1,14 +1,16 @@
 <!--miniprogram/pages/productList/productList.wxml-->
-<scroll-view>
-  <block  wx:for="{{list}}" wx:key="{{item.id}}">
+<scroll-view class="container">
+  <block  wx:for="{{list}}" wx:key="index">
   <!-- <image src="{{item.image}}" /> -->
-    <view class="box">
-      <van-card title="{{item.name}}" thumb="{{item.image}}">
-        <view slot="footer">
-          <text class="price">￥{{item.price}}</text>
-          <view><image src="../../images/yys-icon/buy.png" mode="widthFix" /></view>
-        </view>
-      </van-card>
+    <view class="card col-50">
+      <navigator url="../product/product?title=${item.name}">
+        <image src="{{item.img}}" mode="widthFix" />
+      </navigator>
+      <view><text class="title">{{item.name}}</text></view>
+      <text class="price">￥{{item.price}}</text>
     </view>
   </block>
 </scroll-view>
+<view class="footer">
+  <text>没有更多了</text>
+</view>

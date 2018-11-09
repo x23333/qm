@@ -1,2 +1,30 @@
-<!--miniprogram/pages/product/product.wxml-->
-<text>miniprogram/pages/product/product.wxml</text>
+<view class="container">
+  <view>
+    <swiper indicator-dots="true" autoplay="true" circular="true">
+      <block wx:for="">
+        <swiper-item>
+          <image src="{{}}" data-id="{{}}" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <block wx:if="{{.zhekou}}">
+      <view class="discount">
+        <view>
+          float: left
+        </view>
+        <view float:right>
+          <text>距结束仅剩</text>
+          <text>{{}}天{{}}时{{}}分{{}}秒</text>
+        </view> 
+      </view>
+    </block>
+    <view>
+      title={{item.name}}
+      price
+      折前价 加横线 
+      <view float: right>
+        分享图标
+      </view>
+    </view>
+  </view>
+</view>
