@@ -1,0 +1,12 @@
+{
+  "name": "from_data",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "x23333 <2393274999@qq.com> (https://github.com/x23333)",
+  "license": "MIT"
+}

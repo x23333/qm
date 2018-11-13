@@ -25,6 +25,27 @@
       <view float: right>
         分享图标
       </view>
+      下边框
+      <view>
+        运费 ：{{item.yunfei}}  
+      </view>
+      边距
+      <view>
+          <image src="" />
+         阴阳师周边店 button{{进店}}
+      </view>
+      <view>
+        勾标签 企业认证 店铺认证 担保交易
+      </view>
+      <view>
+        商品详情
+      </view>
+      <scroll-view scroll-y>
+        <block wx:for="{{items.xiangqing}}">
+          <image src="" />
+        </block>
+      </scroll-view>
+      GoodsAction 
     </view>
   </view>
 </view>

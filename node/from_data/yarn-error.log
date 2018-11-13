@@ -1,0 +1,32 @@
+Arguments: 
+  G:\QMX\Node.js\node.exe G:\QMX\yarn\bin\yarn.js global add nodeman
+
+PATH: 
+  .;G:\jdk 8\lib;G:\QMX\Node.js;G:\jdk 8\lib\dt.jar;G:\jdk 8\lib\tools.jar;G:\QMX\Node.js;G:\QMX\yarn\bin\;G:QMX\Node.js;G:\QMX\Git;;G:\QMX\Microsoft VS Code\bin;C:\Users\mmc\AppData\Roaming\npm;C:\Users\mmc\AppData\Local\Yarn\bin;G:\安装目录\Microsoft VS Code\bin
+
+Yarn version: 
+  1.9.4
+
+Node version: 
+  8.12.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: g:\workspace\qm_lesson\node\from_data\package.json: Unexpected end of JSON input
+      at JSON.parse (<anonymous>)
+      at G:\QMX\yarn\lib\cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (G:\QMX\yarn\lib\cli.js:92:30)
+      at G:\QMX\yarn\lib\cli.js:103:13
+      at <anonymous>
+
+npm manifest: 
+  
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
