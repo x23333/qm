@@ -41,7 +41,7 @@ document.onkeypress = function(ev) {
   var keyCode = ev.keyCode;
   var command = makeCommand(Ryu, commands[keyCode]);
   if(command) {
-    commandStack.push(command);   
+    commandStack.push(command);
     command();
   }
 }
