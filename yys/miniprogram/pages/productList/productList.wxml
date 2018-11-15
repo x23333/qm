@@ -3,7 +3,7 @@
   <block  wx:for="{{list}}" wx:key="index">
   <!-- <image src="{{item.image}}" /> -->
     <view class="card col-50">
-      <navigator url="../product/product?title=${item.name}">
+      <navigator url="../product/product?title={{item.name}}">
         <image src="{{item.img}}" mode="widthFix" />
       </navigator>
       <view><text class="title">{{item.name}}</text></view>

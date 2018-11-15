@@ -1,51 +1,55 @@
 <view class="container">
   <view>
     <swiper indicator-dots="true" autoplay="true" circular="true">
-      <block wx:for="">
+      <block wx:for="{{product.rowimage}}" wx:key="index">
         <swiper-item>
-          <image src="{{}}" data-id="{{}}" mode="aspectFill" />
+          <image src="{{product.rowimage[0]}}" data-id="index" mode="aspectFill" />
         </swiper-item>
       </block>
     </swiper>
-    <block wx:if="{{.zhekou}}">
-      <view class="discount">
-        <view>
-          float: left
-        </view>
-        <view float:right>
-          <text>距结束仅剩</text>
-          <text>{{}}天{{}}时{{}}分{{}}秒</text>
-        </view> 
+  </view>
+
+  <block wx:if="{{product.discount}}">
+    <view class="discount">
+      <view>
+        <!-- float: left -->
       </view>
-    </block>
+      <view float:right>
+        <text>距结束仅剩</text>
+        <text>{{}}天{{}}时{{}}分{{}}秒</text>
+      </view> 
+    </view>
+  </block>
+
+  <view>
     <view>
-      title={{item.name}}
-      price
-      折前价 加横线 
-      <view float: right>
-        分享图标
-      </view>
-      下边框
-      <view>
-        运费 ：{{item.yunfei}}  
-      </view>
-      边距
-      <view>
-          <image src="" />
-         阴阳师周边店 button{{进店}}
-      </view>
-      <view>
-        勾标签 企业认证 店铺认证 担保交易
-      </view>
-      <view>
-        商品详情
-      </view>
-      <scroll-view scroll-y>
-        <block wx:for="{{items.xiangqing}}">
-          <image src="" />
-        </block>
-      </scroll-view>
-      GoodsAction 
+      {{product.name}}
+      {{product.price}}
+    </view>
+    <view>
+      分享图标
+    </view>
+    <view>
+      运费 ：{{item.yunfei}}  
     </view>
   </view>
+
+  <view>
+      <image src="" />
+      阴阳师周边店 <button>进店</button>
+  </view>
+
+  <view>
+    勾标签 企业认证 店铺认证 担保交易
+  </view>
+
+  <view>
+    商品详情
+  </view>
+  <scroll-view scroll-y>
+    <block wx:for="{{product.dimage}}" wx:key="index">
+      <image src="{{product.dimage[imdex]}}" />
+    </block>
+  </scroll-view>
+  GoodsAction   
 </view>
