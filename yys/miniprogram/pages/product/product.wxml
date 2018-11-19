@@ -1,3 +1,7 @@
+
+<button class="a" bindtap="aa">aa</button>
+
+
 <view class="container">
   <view>
     <swiper indicator-dots="true" autoplay="true" circular="true">
@@ -8,7 +12,7 @@
       </block>
     </swiper>
   </view>
-
+  
   <block wx:if="{{product.discount}}">
     <view class="discount">
       <view>

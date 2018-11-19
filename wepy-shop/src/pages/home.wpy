@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import tip from '@/utils/tip'
 import wepy from 'wepy'
 import Bombscreen from '@/components/bomb_screen'
 // 前端联调 API @ alias 短地址  @ 指向src
@@ -43,10 +44,10 @@ export default class extends wepy.page{
   }
   methods = {
     closeAlert() {
-      console.log('关闭了')
+      tip.alert('关闭')
     },
     alertCallback() {
-      console.log('已领取')
+      tip.alert('参与活动')
     }
   }
 

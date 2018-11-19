@@ -28,6 +28,9 @@ Page({
         }
       })
   },
+  aa () {
+    console.log("a")
+  }
 
 
 })
