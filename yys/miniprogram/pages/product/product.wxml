@@ -1,13 +1,9 @@
-
-<button class="a" bindtap="aa">aa</button>
-
-
 <view class="container">
-  <view>
-    <swiper indicator-dots="true" autoplay="true" circular="true">
-      <block wx:for="{{product.rowimage}}" wx:key="index">
+  <view class="head_img">
+    <swiper indicator-dots="true" autoplay="true" circular="true" class="bd_swiper">
+      <block wx:for="{{rowimage}}" wx:key="index">
         <swiper-item>
-          <image src="{{product.rowimage[0]}}" data-id="index" mode="aspectFill" />
+          <image src="{{rowimage[index]}}" data-id="index" mode="widthFix" />
         </swiper-item>
       </block>
     </swiper>
@@ -25,35 +21,27 @@
     </view>
   </block>
 
-  <view>
-    <view>
+  <view class="detail">
+    <view class="detail_name">
       {{product.name}}
-      {{product.price}}
     </view>
-    <view>
-      分享图标
-    </view>
-    <view>
-      运费 ：{{item.yunfei}}  
+    <view class="detail_price">
+      ￥{{product.price}}      
     </view>
   </view>
-
-  <view>
-      <image src="" />
-      阴阳师周边店 <button>进店</button>
-  </view>
-
-  <view>
-    勾标签 企业认证 店铺认证 担保交易
-  </view>
-
-  <view>
+  <view class="in"></view>
+  <view class="title">
     商品详情
   </view>
-  <scroll-view scroll-y>
-    <block wx:for="{{product.dimage}}" wx:key="index">
-      <image src="{{product.dimage[imdex]}}" />
+  <scroll-view scroll-y class="dimg">
+    <block wx:for="{{dimage}}" wx:key="index">
+      <image src="{{dimage[index]}}" mode="widthFix" />
     </block>
   </scroll-view>
-  GoodsAction   
+  <van-goods-action>
+    <van-goods-action-icon icon="chat" text="客服"  />
+    <van-goods-action-icon icon="cart" text="购物车" bind:click="toCart"/>
+    <van-goods-action-btn text="加入购物车" bind:click="addCart" />
+    <van-goods-action-btn text="立即购买" bind:click="toBuy" />
+  </van-goods-action>
 </view>

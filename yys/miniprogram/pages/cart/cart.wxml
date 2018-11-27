@@ -1,30 +1,11 @@
 <view class="main">
-  <view wx:if="{{hasList}}">
-    <block wx:for="{{cartlist}}">
-      <view>
-        复选框
-        <image src="{{item.img}}" />
-        <view>
-          <view>
-            {{item.title}}
-          </view> 
-          <text>￥`${{item.price}}`</text>
-        </view>
-        <text>{{item.jianshu}}</text>
-      </view>
-    </block>
-    <view>
-      <!-- <van-submit-bar
-  :price="3050"
-  button-text="提交订单"
-  @submit="onSubmit"
->
-  <van-checkbox v-model="checked">全选</van-checkbox>
-  <span slot="tip">
-    你的收货地址不支持同城送, <span>修改地址</span>
-  </span>
-</van-submit-bar> -->
-    </view>
+  <view wx:if="{{carts.length}}">
+    <scroll-view scroll-y>
+      <block wx:for="{{carts}}">
+        <my-card name="阴阳师" num="1" price="24" image="https://g.fp.ps.netease.com/gift/file/5bd2c43996dee4c8f0dcb33cihKYMwii"></my-card>
+      </block>
+    </scroll-view>
+    <van-submitbar price="{{ 3050 }}" button-text="提交订单" bind:submit="onSubmit"><van-submitbar>
   </view>
   <view wx:else>
     <view class="cart-no-data">购物车是空的哦~</view>

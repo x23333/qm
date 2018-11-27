@@ -1,24 +1,5 @@
-/**index.wxss**/
 .container {
   width: 100%;
-  margin: 0;
-  padding: 0;
-}
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #000000;
 }
 .in {
   width: 100%;

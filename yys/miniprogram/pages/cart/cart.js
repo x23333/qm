@@ -6,7 +6,9 @@ Page({
    */
   data: {
     hasList: false,
-    carts: [],
+    carts: [{
+      name : "asd"
+    }],
     totalPrice: 0,
     selectAllStatus: false
   },

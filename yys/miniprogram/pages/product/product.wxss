@@ -1,1 +1,56 @@
-/* miniprogram/pages/product/product.wxss */
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.head_img {
+  width: 100%;
+  top: 0;
+}
+.bd_swiper {
+  width: 100%;
+  height: 566rpx;
+}
+.bd_swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.detail {
+  width: 100%;
+  background: #ffffff;
+  padding-left: 30rpx;
+}
+.detail_name {
+  color: #111111;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+.detail_price {
+  color: #fe4643;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.title {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 26rpx;
+  color: #111111;
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 10rpx;
+  text-align: center;
+}
+.dimg {
+  width: 100%;
+}
+.dimg image {
+  width: 100%;
+}
+.in {
+  width: 100%;
+  height: 10rpx;
+  background-color: #f0f0f0;
+}

@@ -5,7 +5,9 @@ const db = wx.cloud.database();
 Page({
   data: {
     name: '',
-    product: {}
+    product: {},
+    rowimage: [],
+    dimage: []
   },
   onLoad (options) {
     let name = options.title;
@@ -20,17 +22,13 @@ Page({
       })
       .get({
         success: res => {
-          console.log(res.data[0]);
+          console.log(res.data[0].dimage);
           this.setData({
-            product: res.data[0]
-
+            product: res.data[0],
+            rowimage: res.data[0].rowimage,
+            dimage: res.data[0].dimage
           })
         }
       })
-  },
-  aa () {
-    console.log("a")
   }
-
-
 })

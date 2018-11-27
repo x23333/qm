@@ -1,0 +1,5 @@
+<view class="num-controller">
+  <view class="box sub" hidden="{{num<1}}" bindtap="sub"></view>
+  <view class="box num" hidden="{{num<1}}">{{num}}</view>
+  <view class="box add" bindtap="add"></view>
+</view>

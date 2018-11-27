@@ -1,24 +1,23 @@
-<!--index.wxml-->
-<view class="in"></view>
-  <van-cell title="我的订单" is-link value="查看全部订单>"></van-cell>
-  <view class="ff">
-    <view class="box"><image src="../../images/yys-icon/pay.png" mode="widthFix" />待付款</view>
-    <view class="box"><image src="../../images/yys-icon/wait.png" mode="widthFix" />待发货</view>
-    <view class="box"><image src="../../images/yys-icon/onrode.png" mode="widthFix" />已发货</view>
-    <view class="box"><image src="../../images/yys-icon/success.png" mode="widthFix" />已完成</view>
-  </view>
-  <view class="in"></view>
-  <van-cell title="购物车" is-link></van-cell>
-  <view class="in"></view>
-  <van-cell-group>
-    <van-cell title="我的会员卡" is-link></van-cell>
-    <van-cell title="我的返现" is-link></van-cell>
-    <van-cell title="我的礼品卡" is-link></van-cell>
-    <van-cell title="我的积分" is-link></van-cell>
-    <van-cell title="我的优惠券" is-link></van-cell>
-    <van-cell title="我的优惠码" is-link></van-cell>
-    <van-cell title="我的礼物" is-link></van-cell>
-    <van-cell title="分销员中心" is-link></van-cell>
-    <van-cell title="我购买的专栏、内容" is-link></van-cell>
-  </van-cell-group>
 
+<view class="in"></view>
+<van-cell title="我的订单" is-link value="查看全部订单"></van-cell>
+<view class="ff">
+  <view class="box"><image src="../../images/yys-icon/pay.png" mode="widthFix" />待付款</view>
+  <view class="box"><image src="../../images/yys-icon/wait.png" mode="widthFix" />待发货</view>
+  <view class="box"><image src="../../images/yys-icon/onroad.png" mode="widthFix" />已发货</view>
+  <view class="box"><image src="../../images/yys-icon/success.png" mode="widthFix" />已完成</view>
+</view>
+<view class="in"></view>
+<van-cell title="购物车" is-link></van-cell>
+<view class="in"></view>
+<van-cell-group>
+  <van-cell title="我的会员卡" is-link></van-cell>
+  <van-cell title="我的返现" is-link></van-cell>
+  <van-cell title="我的礼品卡" is-link></van-cell>
+  <van-cell title="我的积分" is-link></van-cell>
+  <van-cell title="我的优惠券" is-link></van-cell>
+  <van-cell title="我的优惠码" is-link></van-cell>
+  <van-cell title="我的礼物" is-link></van-cell>
+  <van-cell title="分销员中心" is-link></van-cell>
+  <van-cell title="我购买的专栏、内容" is-link></van-cell>
+</van-cell-group>

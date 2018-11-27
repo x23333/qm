@@ -1,2 +1,21 @@
-<!--compontent/card/index.wxml-->
-<text>compontent/card/index.wxml</text>
+<view class="card_container">
+  <view class="card_selected">
+    <view class="card_choose">
+      <icon wx:if="{{selected}}" type="success" color="red" data-index="{{index}}" class="cart-pro-select" bindtap="selectedList"/>
+      <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectedList"/>  
+    </view>
+  </view>
+  <view class="card_img" bindtap="choose">
+    <image src="{{image}}" />
+  </view>
+  <view class="card_detail">
+    <view class="card_detail_name">{{name}}</view>
+    <view class="card_detail_price">￥{{price}}</view>
+    <view class="card_detail_num">
+      <view class="add">+</view>
+      <view class="input">{{num}}</view>
+      <view class="sub">-</view>
+    </view>
+    <view class="card_detail_delete"></view>
+  </view>
+</view>

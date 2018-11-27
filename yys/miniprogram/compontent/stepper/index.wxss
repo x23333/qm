@@ -1,0 +1,20 @@
+.num-controller {
+  width: 30rpx;
+  height: 10rpx;
+  display: inline-block;
+}
+.box {
+  width: 10rpx;
+  height: 10rpx;
+  box-sizing: border-box;
+  border: 1px solid 
+}
+.add {
+  background-color: rgb(150, 150, 150);
+}
+.sub {
+  background-color: rgb(150, 150, 150);
+}
+.num {
+  background-color: #fff;
+}
