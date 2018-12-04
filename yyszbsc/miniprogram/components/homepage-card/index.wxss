@@ -1,1 +1,15 @@
-/* components/homepage-card/index.wxss */
+.wp {
+  max-width: 750rpx;
+  margin: 0;
+}
+
+.wp image {
+  width:100%;
+  border: 0;
+  border-style: none;
+  display: block;
+}
+.wp .col-50 {
+  float: left;
+  width: 50%;
+}

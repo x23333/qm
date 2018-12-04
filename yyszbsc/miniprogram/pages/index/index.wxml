@@ -1,43 +1,105 @@
-<!--index.wxml-->
-<view class="container">
-
-  <!-- 用户 openid -->
-  <view class="userinfo">
-    <button 
-      open-type="getUserInfo" 
-      bindgetuserinfo="onGetUserInfo"
-      class="userinfo-avatar"
-      style="background-image: url({{avatarUrl}})"
-    ></button>
+<!-- 头部 下拉隐藏上拉出现 -->
+<view class="header {{ani}}">
+  <view class="header-con" >
+    <view class="yyshead">
+      <view class="i-h5-logo-yys"></view>
+    </view>
+  </view>
+</view>
+<view class="banner">
+  <view class="wp">
+    <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/banner.jpg" mode="widthFix"/>
+  </view>
+</view>
+<view class="mainbox">
+  <view class="wp">
     <view>
-      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+      <navigator url="../productList/productList?title=宠物&base=pat">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part00.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=黄金转运&base=huangjin">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part01.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../product/product?title=纸筒人转运&base=zhi">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part02.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../product/product?title=礼盒&base=lihe">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part03.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=木屐&base=muji">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part04.jpg" mode="widthFix"/>          
+      </navigator>
     </view>
-  </view>
-
-
-  <!-- 上传图片 -->
-  <view class="uploader">
-    <view class="uploader-text" bindtap="doUpload">
-      <text>上传图片</text>
+    <view>
+      <navigator url="../product/product?title=小风扇&base=fengshan" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part05_1.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../product/product?title=钱包&base=qianbao" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part05_2.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../product/product?title=印章&base=zhang" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part06_1.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../product/product?title=指环扣&base=huankou" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part06_2.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../product/product?title=发带&base=fadai" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part07_1.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../product/product?title=杯垫&base=beidian" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part07_2.jpg" mode="widthFix"/>          
+      </navigator>
     </view>
-    <view class="uploader-container" wx:if="{{imgUrl}}">
-      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    <view>
+      <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part08.jpg" mode="widthFix" />
     </view>
+    <view>
+      <navigator url="../productList/productList?title=T恤&base=Txu">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part09.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=水杯&base=shuibei">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part10.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=包&base=bao">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part11.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=公仔&base=gongzai">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part12.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=冲鸭&base=chongya">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part13.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=绘卷&base=huijuan">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part14.jpg" mode="widthFix"/>          
+      </navigator>
+    </view>
+    <view>
+      <navigator url="../productList/productList?title=家居服&base=jiajufu" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part15_1.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=伞&base=san" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part15_2.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../product/product?title=立牌&base=lipai" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part16_1.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=U型枕&base=Uxing" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part16_2.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=扇&base=shan" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part17_1.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../productList/productList?title=储物罐&base=chuwuguan" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part17_2.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../product/product?title=书签&base=shuqian" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part18_1.jpg" mode="widthFix"/>          
+      </navigator>
+      <navigator url="../product/product?title=铃铛&base=lingdang" class="col-50">
+        <image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part18_2.jpg" mode="widthFix"/>          
+      </navigator>
+    </view>
+    <view><image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part19.jpg" mode="widthFix"/></view>    
+    <view><image src="https://m.gift.163.com/images/buyer/20181011_yys_mobile/part20.jpg" mode="widthFix"/></view>
   </view>
-
-
-  <!-- 操作数据库 -->
-  <view class="uploader">
-    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
-      <text>前端操作数据库</text>
-    </navigator>
-  </view>
-
-  <!-- 新建云函数 -->
-  <view class="uploader">
-    <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
-      <text>快速新建云函数</text>
-    </navigator>
-  </view>
-
 </view>

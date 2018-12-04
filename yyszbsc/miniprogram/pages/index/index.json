@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "homepage-card": "../../components/homepage-card/index"
+  }
+}

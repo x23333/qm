@@ -1,137 +1,90 @@
-/**index.wxss**/
-
-page {
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+view {
+  display: block;
 }
-
-.userinfo, .uploader, .tunnel {
-  margin-top: 40rpx;
-  height: 140rpx;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: all 300ms ease;
+/* 头 */
+.header {
+  margin: 0;
+  padding: 0;
+  height: 144rpx;
+  display: block;
 }
-
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: white;
+.hide {
+  animation: up 1s ease-out;
 }
-
-.userinfo-avatar:after {
-  border: none;
+@keyframes up {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-144rpx) 
+  }
 }
-
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
+.display {
+  animation: down 1s ease-out;
 }
-
-.userinfo-nickname::after {
-  border: none;
+@keyframes down {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(144rpx) 
+  }
 }
-
-.uploader, .tunnel {
-  height: auto;
-  padding: 0 0 0 40rpx;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-.uploader-text, .tunnel-text {
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007aff;
-}
-
-.uploader-container {
-  width: 100%;
-  height: 400rpx;
-  padding: 20rpx 20rpx 20rpx 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.uploader-image {
-  width: 100%;
-  height: 360rpx;
-}
-
-.tunnel {
-  padding: 0 0 0 40rpx;
-}
-
-.tunnel-text {
-  position: relative;
-  color: #222;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.tunnel-text:first-child {
-  border-top: none;
-}
-
-.tunnel-switch {
-  position: absolute;
-  right: 20rpx;
-  top: -2rpx;
-}
-
-.disable {
-  color: #888;
-}
-
-.service {
+.header-con {
   position: fixed;
-  right: 40rpx;
-  bottom: 40rpx;
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 50%;
-  background: linear-gradient(#007aff, #0063ce);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  transition: all 300ms ease;
+  top: 0;
+  height: 144rpx;
+  line-height: 22rpx;
+  background: url(https://m.gift.163.com/images/ui_icon/yysbg.jpg) 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  border-bottom: 2rpx solid #b79651;
+  color: #b49152;
+  overflow: hidden;
+}
+.header-con slideDown {
+  top: 144rpx;
+  animation: hide .5s ease-out;
+}
+.header-con .yyshead {
+  padding: 28rpx 180rpx;
+  margin: 0 auto;
+}
+.header-con .yyshead .i-h5-logo-yys {
+  background-size: 100% 100%;
+  width: 392rpx;
+  height: 100rpx;
+  background-image: url(https://m.gift.163.com/images/ui_icon/h5-logo-yys.png);
+}
+#mainBox {
+  background-color: #efe8e0;
+}
+#mainBox image {
+  width: 100%;
+  
+  vertical-align: top;
+}
+/* 头图 */
+
+.banner {
+  top: 0;
+  overflow: hidden;
+  background-color: #efe8e0;
+}
+.wp {
+  max-width: 750rpx;
+  margin: 0;
 }
 
-.service-button {
-  position: absolute;
-  top: 40rpx;
+.wp image {
+  width:100%;
+  border: 0;
+  border-style: none;
+  display: block;
 }
-
-.service:active {
-  box-shadow: none;
-}
-
-.request-text {
-  padding: 20rpx 0;
-  font-size: 24rpx;
-  line-height: 36rpx;
-  word-break: break-all;
+.wp .col-50 {
+  float: left;
+  width: 50%;
 }
