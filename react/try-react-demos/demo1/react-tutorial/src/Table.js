@@ -1,29 +1,16 @@
 import  React, { Component } from 'react';
+import TableHeader from './TableHeader';
+import TableBody from './TableBody';
+
 
 class Table extends Component {
   render() {
+    console.log(this.props);
+    const { characterData,removeCharacter } = this.props;
     return (
       <table className="table table-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Job</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>xzt</td>
-            <td>Otaku</td>
-          </tr>
-          <tr>
-            <td>asd</td>
-            <td>Otasdawaku</td>
-          </tr>
-          <tr>
-            <td>xzsadast</td>
-            <td>Otasdasdaku</td>
-          </tr>
-        </tbody>
+        <TableHeader />
+        <TableBody characterData = {characterData} removeCharacter={removeCharacter} />
       </table>
     )
   }
