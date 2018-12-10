@@ -1,5 +1,0 @@
-<scroll-view scroll-y class="wp">
-  <view wx:for="{{product}}" wx:key="index" class="col-2">
-    <image src="product[index]" />
-  </view>
-</scroll-view>
