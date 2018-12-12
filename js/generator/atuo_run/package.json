@@ -1,0 +1,12 @@
+{
+  "name": "atuo_run",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "x23333 <2393274999@qq.com> (https://github.com/x23333)",
+  "license": "MIT",
+  "description": ""
+}
