@@ -20,9 +20,8 @@ function renderBody(state) {
 function renderApp(store) {
   renderHead(store.head);
   renderBody(store.body);
-
 }
 
-renderApp(state);
+renderApp(store);
 dispatch({type: 'BODY_TEXT',text: '修改'});
-renderApp(state);
+renderApp(store);
