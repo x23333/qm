@@ -1,0 +1,15 @@
+{
+  "name": "hapi_eleme",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "x23333 <2393274999@qq.com> (https://github.com/x23333)",
+  "license": "MIT",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "hapi": "16"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "mysql_seq",
+  "version": "0.1.0",
+  "description": {
+    "env2": "^2.2.2",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "x23333 <2393274999@qq.com> (https://github.com/x23333)",
+  "license": "MIT",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0"
+  }
+}
