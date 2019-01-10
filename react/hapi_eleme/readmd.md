@@ -9,3 +9,6 @@ API 是开发工作中的一环 hapi-swagger 将API 开发融合进代码之中
 
 .\node_modules\.bin\sequelize migration:create --name create-goods-table  创建数据表
  .\node_modules\.bin\sequelize db:create  创建数据库
+ .\node_modules\.bin\sequelize db:migrate 操作数据库 + undo 撤回
+
+sequelize + model define

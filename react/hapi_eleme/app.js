@@ -6,6 +6,8 @@ const config = require('./config');
 const pluginHapiSwagger = require('./plugins/hapi-swagger');
 const routesShop = require('./routes/shop');
 
+const routesUsers = require('./routes/users');
+
 server.connection({
   port: config.port,
   host: config.host
@@ -17,7 +19,8 @@ const init = async () => {
   ]);
   server.route([
     ...routesHelloHapi,
-    ...routesShop
+    ...routesShop,
+    ...routesUsers
   ]);
   await server.start();
   console.log(`Server running at: ${server.info.uri}`);

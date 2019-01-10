@@ -5,7 +5,9 @@ module.exports  = [
     method: 'GET',
     path: `/${GROUP_NAME}`,
     handler: async (request,reply) => {
-      reply();
+      const result = await module.shops.findAll();
+
+      reply(result);
     },
     config: {
       tags: ['api', GROUP_NAME],
