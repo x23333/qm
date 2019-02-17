@@ -1,0 +1,38 @@
+
+.none{
+    padding-top: 140rpx;
+    text-align: center;
+}
+.none text{
+    font-size: 28rpx;
+    color: #99a4bf;
+    margin: 24rpx 0 80rpx;
+    display: inline-block;
+    width: 100%;
+}
+.none .none-btn{
+    height: 80rpx;
+    width: 320rpx;
+    border-radius: 5rpx;
+    font-size: 30rpx;
+    background: #2cc17b;
+}
+
+.none image{
+    width: 38%;
+}
+
+.wrap{
+    height: 100vh;
+    /* overflow: hidden; */
+    
+    background-color: #f2f4f7;
+}
+
+
+.bottom{
+    text-align: center;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    color: #99a4bf;
+}

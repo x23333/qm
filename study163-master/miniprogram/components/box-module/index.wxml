@@ -1,0 +1,13 @@
+<!--components/box-module/box-module.wxml-->
+<!-- <view> -->
+  <view class="divide"></view>
+  <view class="box-module">
+    <text class="box-title">{{title}}</text>
+    <block wx:if="{{more}}">
+       <text class="box-more">{{more}}</text>
+    </block>
+    
+      <slot />
+  </view>
+
+<!-- </view> -->
